@@ -1,0 +1,9 @@
+13:40:18.166 UKSSDC::Logging::CREATE_LOG:  line   67  INFO   >>  /swift/srv/autoproc/bin/LSXPS_removeBadAstrom.pl called at 2022 Aug 23 at 12:40:18 UT
+13:40:18.171          main:::  line  142  INFO   >>  Called at 2022 Aug 23 at 12:40:18 UT, with args --readCat=LSXPS --nocat --skipMissing 00030795038, host xep-swiftv-p1.star.le.ac.uk
+13:40:18.171          main:::  line  146  INFO   >>  Will read the GTI information from the LSXPS database.
+13:40:18.171          main:::  line  154  INFO   >>  NOT saving GTIs to the database.
+13:40:18.171          main:::  line  183  INFO   >>  Going to connect to the database
+13:40:18.182          main:::  line  228  INFO   >>  Got event files: sw00030795038xpcw3po_cl_nobrt.evt.gz
+13:40:18.182          main:::  line  240  INFO   >>  Reading GTIs from the database.
+13:40:18.183          main:::  line  300  INFO   >>  No times to remove, so simply copying the files.
+13:40:18.185          main:::  line  478  INFO   >>  Complete.

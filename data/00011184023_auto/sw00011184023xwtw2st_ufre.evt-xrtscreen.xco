@@ -1,0 +1,13 @@
+xsel178831
+read event
+/home/user/Documents/swift_pipeline/data/00011184023_auto
+sw00011184023xwtw2st_ufre.evt
+yes
+filter time file /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2st_clgti.fits
+filter grade "0-2"
+extract events
+yes
+save events /home/user/Documents/swift_pipeline/data/00011184023_auto/xselect178832evt.flt
+yes
+quit
+no

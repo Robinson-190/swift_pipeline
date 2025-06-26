@@ -1,0 +1,287 @@
+---------------------
+:: Execution Result ::
+---------------------
+> Return Code: 1
+> Output:
+--------------------------------------------------------------
+             Running ' xrtproducts version 0.4.3 '
+--------------------------------------------------------------
+xrtproducts_0.4.3: Info: Processing /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt 
+xrtproducts_0.4.3: Info: Running 'ximage'  on '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt'
+ No of detectors read in:   34
+![XIMAGE> chat 0          
+![XIMAGE> read/size=600/ecol=pi/emin=30/emax=1000 /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt          
+![XIMAGE> cey 2000
+![XIMAGE> smo          
+![XIMAGE> cpd /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_sk.gif/gif
+![XIMAGE> disp          
+![XIMAGE> grid
+![XIMAGE> cpd /xs
+![XIMAGE> quit
+![XIMAGE> exit
+xrtproducts_0.4.3: Info: 'ximage' exit with success. Created  '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_sk.gif' image
+xrtproducts_0.4.3: Info: The Spectrum File will be '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_phafile.pha'
+xrtproducts_0.4.3: Info: The Light Curve will be '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc'
+xrtproducts_0.4.3: Info: The Image File will be '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_sk.img'
+xrtproducts_0.4.3: Info: Running 'xselect'  on '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_xselect.xco'
+ 
+                         **  XSELECT V2.5b  **
+ 
+!> Enter session name >[xsel177657] xsel177657
+ Command not found; type ? for a command listing
+!xsel177657:SUZAKU > read eve sw00030795038xpcw3po_cl_barycentric_correction.evt
+!> Enter the Event file dir >[/home/user/Documents/swift_pipeline/data/00030795038_auto//] /home/user/Documents/swift_pipeline/data/00030795038_auto//
+Got new mission: SWIFT
+!> Reset the mission ? >[yes]
+ 
+ 
+        OBJECT      OBS_ID      DATE-OBS            DATAMODE
+      1 PKS2155-304 00030795038 2008-08-22T22:12:13 PHOTON
+ 
+ Notes: XSELECT set up for      SWIFT
+ Time keyword is TIME       in units of s
+ Default timing binsize =   5.0000
+ 
+Setting...
+ Image  keywords   = X          Y           with binning =    1
+ WMAP   keywords   = X          Y           with binning =    1
+ Energy keyword   = PI                     with binning =    1
+ 
+Getting Min and Max for Energy Column...
+Got min and max for PI:     0   1023
+ 
+Got the minimum time resolution of the read data:   2.5073
+MJDREF =  5.1910000742870E+04 with TIMESYS = TDB
+ Number of files read in:            1
+ 
+******************** Observation Catalogue ********************
+ 
+Data Directory is: /home/user/Documents/swift_pipeline/data/00030795038_auto/
+HK Directory is: /home/user/Documents/swift_pipeline/data/00030795038_auto/
+ 
+!xsel177657:SWIFT-XRT-PHOTON > extract image
+extractor v6.08     1 Jun 2022
+ Getting FITS WCS Keywords
+ Doing file: /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt
+ 10% completed 20% completed 30% completed 40% completed 50% completed 60% completed 70% completed 80% completed 90% completed100% completed
+          Total      Good    Bad: Time     Phase     Grade       Cut
+           2105      2105            0         0         0         0
+===============================================================================
+    Grand Total      Good    Bad: Time     Phase     Grade       Cut
+           2105      2105            0         0         0         0
+   in  621.81     seconds
+ Image            has     2105 counts for   3.385     counts/sec
+!xsel177657:SWIFT-XRT-PHOTON > save image /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_sk.img
+Wrote image to file /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_sk.img
+!xsel177657:SWIFT-XRT-PHOTON > set wmapname X Y
+Warning : downstream software assumes that the WMAP is
+          in detector coordinates
+!xsel177657:SWIFT-XRT-PHOTON > set xyname X Y
+!xsel177657:SWIFT-XRT-PHOTON > filter region /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po.reg
+!xsel177657:SWIFT-XRT-PHOTON > set binsize 2.51
+!xsel177657:SWIFT-XRT-PHOTON > extract spectrum
+extractor v6.08     1 Jun 2022
+ Getting FITS WCS Keywords
+ Doing file: /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt[regfilter("xsel177657_region.xsl",X,Y)]
+ 10% completed 20% completed 30% completed 40% completed 50% completed 60% completed 70% completed 80% completed 90% completed100% completed
+          Total      Good    Bad: Time     Phase     Grade       Cut
+           1466      1466            0         0         0         0
+===============================================================================
+    Grand Total      Good    Bad: Time     Phase     Grade       Cut
+           1466      1466            0         0         0         0
+   in  621.81     seconds
+ Spectrum         has     1466 counts for   2.358     counts/sec
+Keyword TLM2FITS has two values: 'V6.4' and 'V6.4    '
+ ... wrote the PHA data Extension
+!xsel177657:SWIFT-XRT-PHOTON > save spectrum /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_phafile.pha
+Wrote spectrum to /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_phafile.pha
+!xsel177657:SWIFT-XRT-PHOTON > filter pha_cutoff 30 100
+!xsel177657:SWIFT-XRT-PHOTON > extract curve exposure=0.0
+extractor v6.08     1 Jun 2022
+ Getting FITS WCS Keywords
+ Doing file: /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt[regfilter("xsel177657_region.xsl",X,Y)]
+ 10% completed 20% completed 30% completed 40% completed 50% completed 60% completed 70% completed 80% completed 90% completed100% completed
+          Total      Good    Bad: Time     Phase     Grade       Cut
+           1466       729            0         0         0       737
+===============================================================================
+    Grand Total      Good    Bad: Time     Phase     Grade       Cut
+           1466       729            0         0         0       737
+   in  621.81     seconds
+ Fits light curve has   729.0     counts for   1.172     counts/sec
+!xsel177657:SWIFT-XRT-PHOTON > save curve /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc
+Wrote FITS light curve to file /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc
+!xsel177657:SWIFT-XRT-PHOTON > quit
+!> Save this session? >[no] no
+xrtproducts_0.4.3: Info: 'xselect' exit with success. Light Curve ,Spectrum and Image  generated for '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt'
+xrtproducts_0.4.3: Info: CallQuzcif: Running quzcif SWIFT XRT - - matrix 2008-08-22 22:12:13 "datamode.eq.photon.and.grade.eq.G0:12.and.XRTVSUB.eq.6" retrieve+ clobber=yes
+CallQuzcif: Info: Output 'quzcif' Command: 
+CallQuzcif: Info:/home/user/caldb//data/swift/xrt/cpf/rmf/swxpc0to12s6_20010101v014.rmf 1
+xrtproducts_0.4.3: Info: Running 'xrtmkarf' 
+
+---------------------------------------------------------------
+		Running 'xrtmkarf_0.6.4'
+---------------------------------------------------------------
+		 Input Parameters List: 
+Name of the input RMF file                    :'/home/user/caldb//data/swift/xrt/cpf/rmf/swxpc0to12s6_20010101v014.rmf'
+Name of the input mirror effective area file  :'CALDB'
+Name of the input filter transmission file    :'CALDB'
+Name of the input arf file                    :'CALDB'
+Name of the input exposure map file           :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_ex.img'
+Name of the input vignetting file             :'CALDB'
+Name of the input spectrum file               :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_phafile.pha'
+Name of the input PSF file                    :'CALDB'
+Name of the output ARF file                   :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr.arf'
+Source SKYX                                   :'0.000000'
+Source SKYY                                   :'0.000000'
+Source off-axis angle (arcmin)                :'-99.000000'
+Extended source?                              : no
+---------------------------------------------------------------
+
+vig_flag (in)  : 0 
+  min exposure : 0.000000 in 0 0 
+  max exposure : 621.810425 in 490 182  
+ MAXIMUM EXPOSURE : 1.000000  
+ CENTER of the ROI (SKY)  461.309505 544.492453 
+ CENTER of the SRC (SKY)  461.309509 544.492432 
+xrtmkarf_0.6.4: Info: WMAP region boundaries (X1:X2,Y1:Y2):[ 442 : 481 , 525 : 564 ] 
+xrtmkarf_0.6.4: Info: Source position (X,Y): [461.309509 , 544.492432] 
+  min ROI exposure : 17.427637 in 465 550 
+  max ROI exposure : 621.810425 in 442 540 
+xrtmkarf_0.6.4: Info: Processing '/home/user/caldb//data/swift/xrt/cpf/rmf/swxpc0to12s6_20010101v014.rmf' CALDB file.
+xrtmkarf_0.6.4: Info: Processing '/home/user/caldb//data/swift/xrt/cpf/arf/swxs6_20010101v001.arf' CALDB file.
+329.686976 -30.254408 329.687000 -30.254410
+ Optical Axis SKY coordinate X: 500.532311
+ Optical Axis SKY coordinate Y: 500.502539
+CX: 461.309509 CY: 544.492432 Off-axis Angle (arcmin): 2.318178 
+vig_flag   : 0 
+>>> using a not vignetted exposure map 
+ xrtmkarf_0.6.4: Info: Processing '/home/user/caldb//data/swift/xrt/cpf/vign/swxvign20010101v001.fits' CALDB file.
+xrtmkarf_0.6.4: Info: Processing '/home/user/caldb//data/swift/xrt/cpf/psf/swxpsf20010101v006.fits' CALDB file.
+ PERC. OF FLUENCE WITHIN THE ROI:  77.731591 % (AT 1.002500 keV )  
+ PERC. OF FLUENCE WITHIN THE ROI:  77.733546 % (ON AVERAGE) 
+xrtmkarf_0.6.4: Info: '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr.arf' file successfully written.
+---------------------------------------------------------------------
+xrtmkarf_0.6.4: Exit with success.
+---------------------------------------------------------------------
+
+		XSPEC version: 12.13.0
+	Build Date/Time: Mon Feb 20 08:58:37 2023
+
+
+Executing script file "/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_xspec.xcm" ...
+
+
+!XSPEC12>chatter 5
+
+!XSPEC12>data /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_phafile.pha
+
+!XSPEC12>response /home/user/caldb//data/swift/xrt/cpf/rmf/swxpc0to12s6_20010101v014.rmf
+
+!XSPEC12>arf /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr.arf
+
+!XSPEC12>setplot energy
+
+!XSPEC12>ignore **-0.3 10.2-**
+
+!XSPEC12>setplot rebin 2 200
+
+!XSPEC12>setplot command " cpd /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3poph.gif/gif"
+
+!XSPEC12>setplot command "time off"
+
+!XSPEC12>setplot command "la t Energy spectrum(sw00030795038xpcw3_phafile.pha)"
+
+!XSPEC12>setplot command "la f"
+
+!XSPEC12>plot ldata
+
+!XSPEC12>quit
+
+!XSPEC12>::tclreadline::readline write /home/user/.xspec/xspec.hty
+ XSPEC: quit
+
+!XSPEC12>tclexit
+ 
+lcurve 1.0 (xronos6.0)
+ 
+ Minimum Newbin Time    2.5100000      (s)
+ for Maximum Newbin No..              248
+ 
+ Default Newbin Time is:   2.5100000    (s) (to have 1 Intv. of     248 Newbins)
+ 
+ 
+ Default Newbins per Interval are:         248
+ (giving       1 Interval of          248 Newbins)
+ 
+ 
+     248 analysis results per interval
+ 
+  1% completed  2% completed  3% completed  4% completed  5% completed  6% completed  7% completed  8% completed  9% completed 10% completed 11% completed 12% completed 13% completed 14% completed 15% completed 16% completed 17% completed 18% completed 19% completed 20% completed 21% completed 22% completed 23% completed 24% completed 25% completed 26% completed 27% completed 28% completed 29% completed 30% completed 31% completed 32% completed 33% completed 34% completed 35% completed 36% completed 37% completed 38% completed 39% completed 40% completed 41% completed 42% completed 43% completed 44% completed 45% completed 46% completed 47% completed 48% completed 49% completed 50% completed 51% completed 52% completed 53% completed 54% completed 55% completed 56% completed 57% completed 58% completed 59% completed 60% completed 61% completed 62% completed 63% completed 64% completed 65% completed 66% completed 67% completed 68% completed 69% completed 70% completed 71% completed 72% completed 73% completed 74% completed 75% completed 76% completed 77% completed 78% completed 79% completed 80% completed 81% completed 82% completed 83% completed 84% completed 85% completed 86% completed 87% completed 88% completed 89% completed 90% completed 91% completed 92% completed 93% completed 94% completed 95% completed 96% completed 97% completed 98% completed 99% completed100% completed
+xrtproducts_0.4.3: Info: Running 'xrtlccorr'  on '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc'
+ERROR: Operation not permitted
+Task xrtlccorr 0.4.0 terminating with status 1
+---------------------------------------------------------------------
+ 		Running 'xrtlccorr_0.4.0'
+---------------------------------------------------------------------
+		 Input Parameters List: 
+Name of the input Light Curve file       :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc'
+Name of the input region file            :'NONE'
+Name of the output Light Curve file      :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corr.lc'
+Name of the output file                  :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corrfact.fits'
+Name of the input TELDEF file            :'CALDB'
+Name of the the input attitude file      :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038pat_barycentric_correction.fits.gz'
+Should aberration be included in aspecting? : no
+Interpolate Attitude values?             : no
+Correct for PSF:                         : yes
+Name of the PSF CALDB file               :'CALDB'
+Source X coordinate                      : -1.000000 
+Source Y coordinate                      : -1.000000 
+Energy value for PSF and Vignetting correction : 1.500000 
+Name of the output Instrument Map file   :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_srawinstr.img'
+Name of the input Event file             :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt'
+Name of the input FOV region file        :'CALDB'
+Name of the input HK Header file         :'/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xhdtc_barycentric_correction.hk'
+---------------------------------------------------------------------
+xrtlccorr_0.4.0: Info: '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corr.lc' file exists,
+xrtlccorr_0.4.0: Warning: parameter 'clobber' set,
+xrtlccorr_0.4.0: Warning: the '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corr.lc' file will be overwritten.
+xrtlccorr_0.4.0: Info: '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corrfact.fits' file exists,
+xrtlccorr_0.4.0: Warning: parameter 'clobber' set,
+xrtlccorr_0.4.0: Warning: the '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corrfact.fits' file will be overwritten.
+xrtlccorr_0.4.0: Info: '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_srawinstr.img' file exists,
+xrtlccorr_0.4.0: Warning: parameter 'clobber' set,
+xrtlccorr_0.4.0: Warning: the '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_srawinstr.img' file will be overwritten.
+xrtlccorr_0.4.0: Info: regionfile set to NONE, the region will be read from lcfile
+xrtlccorr_0.4.0: Info: Processing '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc' file.
+xrtlccorr_0.4.0: Info: Processing '/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt' file.
+xrtlccorr_0.4.0: Error: Input attitude file not consistent with the one used in the calibration of the input event file.
+xrtlccorr_0.4.0: Error: Unable to read value
+xrtlccorr_0.4.0: Error: from /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt file.
+---------------------------------------------------------------------
+xrtlccorr_0.4.0: Exit with Error.
+---------------------------------------------------------------------
+xrtproducts_0.4.3: Error: running 'xrtlccorr'
+xrtproducts_0.4.3: Error: The run was: xrtlccorr srcx=-1 aberration=no outinstrfile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_srawinstr.img pcnframe=0 attfile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038pat_barycentric_correction.fits.gz clobber=yes lcfile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3_lcfile.lc vigfile=CALDB psfflag=yes corrfile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corrfact.fits srcy=-1 regionfile=NONE psffile=CALDB wtnframe=10 chatter=3 infile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt createinstrmap=yes outfile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3posr_corr.lc teldef=CALDB energy=1.5 fovfile=CALDB attinterpol=no history=yes hdfile=/home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xhdtc_barycentric_correction.hk 
+-------------------- xrtproducts  error -----------------------
+xrtproducts_0.4.3: ERROR running 'xrtlccorr'
+--------------------------------------------------------------
+
+> Parameters:
+	infile    : /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_cl_barycentric_correction.evt
+	regionfile: /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po.reg
+	bkgextract: yes
+	bkgregionfile: /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xwtw2po_automatic_background.reg
+	outdir    : /home/user/Documents/swift_pipeline/data/00030795038_auto/
+	stemout   : DEFAULT
+	lcfile    : sw00030795038xpcw3_lcfile.lc
+	phafile   : sw00030795038xpcw3_phafile.pha
+	bkglcfile : sw00030795038xpcw3_bkglcfile.lc
+	bkgphafile: sw00030795038xpcw3_bkgphafile.pha
+	expofile  : /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xpcw3po_ex.img
+	pilow     : 30
+	pihigh    : 100
+	correctlc : yes
+	attfile   : /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038pat_barycentric_correction.fits.gz
+	hdfile    : /home/user/Documents/swift_pipeline/data/00030795038_auto/sw00030795038xhdtc_barycentric_correction.hk
+	pcnframe  : 0
+	clobber   : yes

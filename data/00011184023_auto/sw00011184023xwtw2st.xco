@@ -1,0 +1,13 @@
+chat 0
+read/size=600/xcol=detx/ycol=rawy/xpix=300/ypix=300 /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2st_cl.evt
+cpd /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2stim.gif/gif
+disp
+vplabel/bottom/margin=2.5/color=0 "X Pixels"
+vplabel/bottom/margin=2.5 "DETX Pixels"
+vplabel/left/margin=0.7/color=0/lwidth=10/position=0.33 '200'
+vplabel/left/margin=0.7/color=0/lwidth=10/position=0.67 '400'
+vplabel/left/margin=0.7/color=0/lwidth=10/position=1 "600"
+vplabel/left/margin=2.2/color=0 "Y Pixels"
+vplabel/left/margin=2.2 "Folded Time"
+cpd /xs
+quit

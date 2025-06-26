@@ -1,0 +1,20 @@
+13:40:18.383 UKSSDC::Logging::CREATE_LOG:  line   67  INFO   >>  /swift/srv/autoproc/bin/makeSnapshotInput.pl called at 2022 Aug 23 at 12:40:18 UT
+13:40:18.392          main:::  line  241  INFO   >>  ObsID: `00030795038`, TARG: `00030795`
+13:40:18.402          main:::  line  277  INFO   >>  Using sw00030795038xpcw3po_cl_nobrt_postastrom_total.evt.gz with 600 pixels to a side.
+13:40:18.403          main:::  line  290  INFO   >>  HD file is /swift/data/local_reproc/00030795038/xrt/hk/sw00030795038xhd.hk.gz
+13:40:18.403          main:::  line  297  INFO   >>  Selecting attitude file from attflag
+13:40:18.411          main:::  line  314  INFO   >>  ATTFLAG: 110 so stem=pat
+13:40:18.463          main:::  line  324  INFO   >>  ATT file: /swift/data/local_reproc/00030795038/auxil/sw00030795038pat.fits.gz
+13:40:18.463          main:::  line  328  INFO   >>  MKF: /swift/data/local_reproc/00030795038/auxil/sw00030795038s.mkf.gz
+13:40:18.471          main:::  line  343  INFO   >>  Reading existing snapshot definitions from LSXPS database for file sw00030795038xpcw3po_cl_nobrt_postastrom.evt.gz
+13:40:18.486          main:::  line  384  INFO   >>  SNAPSHOTS:
+  241135396.163543 -- 241136017.973943
+13:40:18.488          main:::  line  525  INFO   >>  Starting snapshot 1
+13:40:18.498          main:::  line  542  INFO   >>  Filter on this snapshot: extractor clobber=yes copyall=yes filename=sw00030795038xpcw3po_cl_nobrt_postastrom_total.evt.gz  eventsout=sw00030795038xpcw3po_cl_nobrt_postastrom_total_01.evt imgfile=sw00030795038xpcw3po_cl_nobrt_postastrom_total_01.img phafile=NONE regionfile=NONE timefile=/scratch/tmp_gti_Wq87dlJHS fitsbinlc=NONE xcolf=X ycolf=Y tcol=TIME
+13:40:18.614          main:::  line  577  INFO   >>  Create the exposure map: xrtexpomap teldef=/usr/local/swift/caldb-latest/data/swift/xrt/bcf/teldef/swx20070911v001.teldef checkattitude=no vigflag=yes clobber=yes infile=sw00030795038xpcw3po_cl_nobrt_postastrom_total_01.evt stemout=sw00030795038xpcw3po_cl_nobrt_postastrom_total_01 outdir=. hdfile=sw00030795038xhd.hk.gz attfile=sw00030795038pat.fits.gz
+13:40:19.954          main:::  line  752  INFO   >>  DELETE sw00030795038xpcw3po_cl_nobrt_postastrom_total_01.{evt,mkf}
+13:40:19.956          main:::  line  888  INFO   >>  Summing images
+13:40:19.956          main:::  line  902  INFO   >>  Summing images: sumIntImages tmp_image_list.txt sw00030795038xpcw3po_cl_nobrt_postastrom_total.img
+13:40:20.032          main:::  line  928  INFO   >>  Summing exposure maps
+13:40:20.033          main:::  line  938  INFO   >>  Calling: sumImages tmp_expo_list.txt sw00030795038xpcw3po_cl_nobrt_postastrom_total_ex.img
+13:40:20.174          main:::  line  947  INFO   >>  Complete.

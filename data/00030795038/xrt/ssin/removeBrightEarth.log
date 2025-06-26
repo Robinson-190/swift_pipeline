@@ -1,0 +1,10 @@
+13:40:17.643 UKSSDC::Logging::CREATE_LOG:  line   67  INFO   >>  /swift/srv/autoproc/bin/LSXPS_removeBrightEarth.pl called at 2022 Aug 23 at 12:40:17 UT
+13:40:17.647          main:::  line  111  INFO   >>  Called at 2022 Aug 23 at 12:40:17 UT, with args --readCat=LSXPS --nocat 00030795038, host xep-swiftv-p1.star.le.ac.uk
+13:40:17.647          main:::  line  148  INFO   >>  Using bright Earth definition from /swift/srv/autoproc/templates/Bright.reg.
+13:40:17.648          main:::  line  166  INFO   >>  Reading existing GTIs from LSXPS database
+13:40:17.659          main:::  line  193  INFO   >>  Creating GTIs from raw light curve.
+13:40:18.063          main:::  line  228  INFO   >>  There are no times with bright Earth to screen out
+13:40:18.064          main:::  line  263  INFO   >>  Working on sw00030795038xpcw3po_cl.evt.gz, creating sw00030795038xpcw3po_cl_nobrt.evt.
+13:40:18.064          main:::  line  268  INFO   >>  Checking database for the GTI
+13:40:18.064          main:::  line  330  INFO   >>  No bright Earth, so just copying sw00030795038xpcw3po_cl.evt.gz to sw00030795038xpcw3po_cl_nobrt.evt.gz
+13:40:18.065          main:::  line  386  INFO   >>  Complete.

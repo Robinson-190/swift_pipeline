@@ -1,0 +1,15 @@
+xsel177696
+read eve sw00011184023xwtw2st_cl.evt
+/home/user/Documents/swift_pipeline/data/00011184023_auto//
+
+set wmapname X Y
+set xyname X Y
+filter region /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2st.reg
+set binsize 0.1
+extract spectrum
+save spectrum /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2stsr.pha
+filter pha_cutoff 30 1000
+extract curve exposure=0.0
+save curve /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2stsr.lc
+quit
+no

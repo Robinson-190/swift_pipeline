@@ -1,0 +1,6 @@
+13:40:21.678 UKSSDC::Logging::CREATE_LOG:  line   67  INFO   >>  /swift/srv/autoproc/bin/prepareSLByObs.pl called at 2022 Aug 23 at 12:40:21 UT
+13:40:21.678          main:::  line  149  INFO   >>  Created the file '00030795038.slin' to store the output
+13:40:21.678          main:::  line  160  INFO   >>  Checking whether 00030795038 has any database entries.
+13:40:21.690          main:::  line  180  INFO   >>  00030795038 is already in the hasSL database
+13:40:21.690          main:::  line  183  INFO   >>  There is no SL for this obs.
+13:40:21.690          main:::  line  194  INFO   >>  Complete.

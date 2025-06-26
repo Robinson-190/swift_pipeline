@@ -1,0 +1,14 @@
+chatter 5
+data /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2stsr.pha
+response /home/user/caldb//data/swift/xrt/cpf/rmf/swxwt0to2s6_20131212v015.rmf
+arf /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2stsr.arf
+setplot energy
+ignore **-0.3 10.2-**
+setplot rebin 2 200
+setplot command " cpd /home/user/Documents/swift_pipeline/data/00011184023_auto/sw00011184023xwtw2stph.gif/gif"
+setplot command "time off"
+setplot command "la t Energy spectrum(sw00011184023xwtw2stsr.pha)"
+setplot command "la f"
+plot ldata
+quit
+y

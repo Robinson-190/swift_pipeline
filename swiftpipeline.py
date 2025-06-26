@@ -342,7 +342,7 @@ def run_barycentric_correction(
             _=barycorr(infile=f'{xrtpipeline_output_folder}sw{obs_id}{file_for_barycentric_correction}',
                      outfile=f'{xrtpipeline_output_folder}sw{obs_id}{output_file_name}',
                      orbitfiles=f'{xrtpipeline_output_folder}sw{obs_id}sao.fits.gz',
-                     clobber=f'clobber={bool_cmd_str(clobber)}',allow_failure=True)
+                     clobber=f'clobber={bool_cmd_str(clobber)}',allow_failure=True,noprompt=True)
 
 
 
@@ -358,7 +358,8 @@ def run_xrtproducts(
     pi_high: float = 100.0,
     background_region_file: str = "",
     mode: str = None,
-    window: int = None,pix_radius=20,ra=None,dec=None
+    window: int = None,pix_radius=20,ra=None,dec=None,
+    gap_ratio=1.2, area_ratio=10.0
 ):
     """Run the commands to extract xrt_products from the data
 
@@ -415,7 +416,7 @@ def run_xrtproducts(
             # Generate file
             # store filename
             background_region_file = f"{file_base}x{mode}{window_str}po_automatic_background.reg"
-            automatic_region_generation(f'{data_folder}')
+            automatic_region_generation(f'{data_folder}',gap_ratio=gap_ratio, area_ratio=area_ratio)
             
         logfile_name = f"{output_folder}xrtproducts_log_{obs_id}{mode}{window}"
         
@@ -910,18 +911,3 @@ def generate_diagnostic_plot(data_folder:str,pha_folder:str,mode:str=None,window
     fig.subplots_adjust(wspace=0.3, hspace=0.3)
     plt.savefig(pha_folder+f'sw{obs_id}x{mode}w{window} Summary.png')
     plt.show()
-
-if __name__ == "__main__":
-    BACKSCAL = 1.25e-1
-    #generate_diagnostic_plot(event_folder='/home/user/Documents/leptohadronic-fitting/swiftpipeline/data/00011184023/xrt/event/',
-                            #mode='wt',window='2',pha_folder='/home/user/Documents/leptohadronic-fitting/swiftpipeline/data/xrtpipeline_output/00011184023/xproducts_output')
-    #generate_diagnostic_plot(data_folder='/home/user/Documents/Gammapy_tests/swiftxrt_data/00030795038/',
-                             #mode='wt',window='2',pha_folder='/home/user/Documents/Gammapy_tests/swiftxrt_data/script/apo/')
-    # make_gammapy_compliant("/home/user/Documents/Gammapy_tests/swiftxrt_data/00030795038_processed")
-    
-    data_folder='/home/user/Documents/leptohadronic-fitting/swiftpipeline/data/00011184023/'
-    output_folder='/home/user/Documents/leptohadronic-fitting/swiftpipeline/data/00011184023_apo/'
-    
-    #swiftxrtpipeline(raw_data_folder=data_folder,output_folder=output_folder)
-    
-    generate_diagnostic_plot(data_folder=data_folder,mode='wt',window='2',pha_folder=output_folder)

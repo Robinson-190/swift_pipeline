@@ -1,0 +1,17 @@
+13:40:21.302 UKSSDC::Logging::CREATE_LOG:  line   67  INFO   >>  /swift/srv/autoproc/bin/makeSnapshotInput.pl called at 2022 Aug 23 at 12:40:21 UT
+13:40:21.311          main:::  line  241  INFO   >>  ObsID: `00030795038`, TARG: `00030795`
+13:40:21.323          main:::  line  277  INFO   >>  Using sw00030795038xpcw3po_cl_nobrt_postastrom_band3.evt.gz with 600 pixels to a side.
+13:40:21.323          main:::  line  290  INFO   >>  HD file is /swift/data/local_reproc/00030795038/xrt/hk/sw00030795038xhd.hk.gz
+13:40:21.323          main:::  line  297  INFO   >>  Selecting attitude file from attflag
+13:40:21.332          main:::  line  314  INFO   >>  ATTFLAG: 110 so stem=pat
+13:40:21.333          main:::  line  324  INFO   >>  ATT file: /swift/data/local_reproc/00030795038/auxil/sw00030795038pat.fits.gz
+13:40:21.333          main:::  line  328  INFO   >>  MKF: /swift/data/local_reproc/00030795038/auxil/sw00030795038s.mkf.gz
+13:40:21.337          main:::  line  343  INFO   >>  Reading existing snapshot definitions from LSXPS database for file sw00030795038xpcw3po_cl_nobrt_postastrom.evt.gz
+13:40:21.349          main:::  line  384  INFO   >>  SNAPSHOTS:
+  241135396.163543 -- 241136017.973943
+13:40:21.350          main:::  line  525  INFO   >>  Starting snapshot 1
+13:40:21.361          main:::  line  542  INFO   >>  Filter on this snapshot: extractor clobber=yes copyall=yes filename=sw00030795038xpcw3po_cl_nobrt_postastrom_band3.evt.gz  eventsout=sw00030795038xpcw3po_cl_nobrt_postastrom_band3_01.evt imgfile=sw00030795038xpcw3po_cl_nobrt_postastrom_band3_01.img phafile=NONE regionfile=NONE timefile=/scratch/tmp_gti_DYPxk5oUL fitsbinlc=NONE xcolf=X ycolf=Y tcol=TIME
+13:40:21.501          main:::  line  752  INFO   >>  DELETE sw00030795038xpcw3po_cl_nobrt_postastrom_band3_01.{evt,mkf}
+13:40:21.502          main:::  line  888  INFO   >>  Summing images
+13:40:21.502          main:::  line  902  INFO   >>  Summing images: sumIntImages tmp_image_list.txt sw00030795038xpcw3po_cl_nobrt_postastrom_band3.img
+13:40:21.571          main:::  line  947  INFO   >>  Complete.
