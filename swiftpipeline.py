@@ -170,7 +170,7 @@ def write_annulus_region(source_region_file: str, background_region_file: str = 
     if 'circle' in circle_str.lower():  # Do not rewrite annulus files
         set_image_coordinate_region(source_region_file)
         annulus_string = annulus_from_circle(
-            circle_str, gap_ratio=1.2, area_ratio=10.0)
+            circle_str, gap_ratio=gap_ratio, area_ratio=area_ratio)
         if not background_region_file:
             background_region_file = source_region_file.replace(
                 ".reg", "_automatic_background.reg")
